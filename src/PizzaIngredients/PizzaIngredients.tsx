@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { usePizzaContext } from "../PizzaContext/PizzaContext"
-import { Ingredients } from "../PizzaContext/pizzaContext.types";
+import { Ingredient } from "../PizzaContext/pizzaContext.types";
 import "./style.css"
 
 const PizzaIngredients = () => {
@@ -8,8 +8,8 @@ const PizzaIngredients = () => {
   return (
     <div className="ingredients-container">
       {
-        pizzas.length && pizzas[0].ingredients.map((item: Ingredients, idx: number): ReactNode => {
-          return <img src={item.imgUrl} key={idx} title={item.name} alt={item.name} />
+        pizzas.length && pizzas[0].ingredients.map((item: Ingredient): ReactNode => {
+          return <img src={item.imgUrl} key={item.imgUrl} title={item.name} alt={item.name} />
         })
       }
     </div>

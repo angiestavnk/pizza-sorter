@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export enum Size {
   Small,
   Medium,
@@ -7,7 +9,7 @@ export enum Size {
 
 export type DeliveryTime = 30 | 45 | 60 | 75
 
-export type Ingredients = {
+export type Ingredient = {
   name: string,
   imgUrl: string
 }
@@ -17,7 +19,7 @@ export type Pizza = {
   price: number,
   size: Size,
   deliveryTime: DeliveryTime,
-  ingredients: Ingredients[]
+  ingredients: Ingredient[]
 }
 
 export enum SortType {
@@ -25,6 +27,10 @@ export enum SortType {
   price = "price",
   size = "size",
   deliveryTime = "deliveryTime"
+}
+
+export type ProviderProps = {
+  children: ReactNode
 }
 
 export type SortProduct = (products: Pizza[], sortParam: SortType) => Pizza[]
