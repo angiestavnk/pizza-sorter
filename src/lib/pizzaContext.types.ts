@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
 
 export enum Size {
-  Small,
+  Small = 1,
   Medium,
   Large,
   ExtraLarge

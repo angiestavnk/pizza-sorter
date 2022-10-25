@@ -1,19 +1,19 @@
-import { PizzaContextProvider } from './PizzaContext/PizzaContext';
-import PizzaIngredients from './PizzaIngredients';
-import PizzaName from './PizzaName';
-import PizzaSortingDropdown from './PizzaSortingDropdown';
+import PizzaProvider from './components/PizzaProvider';
+import PizzaIngredients from './components/PizzaIngredients';
+import Pizza from './components/Pizza';
+import PizzaSortingDropdown from './components/PizzaSortingDropdown';
 import './App.css'
 
 function App() {
   return (
-    <PizzaContextProvider>
+    <PizzaProvider>
       <h2>Select your Pizza</h2>
       <div className='content-container'>
         <PizzaSortingDropdown />
-        <PizzaName />
+        <Pizza />
         <PizzaIngredients />
       </div>
-    </PizzaContextProvider>
+    </PizzaProvider>
   );
 }
 

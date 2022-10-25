@@ -1,6 +1,6 @@
 import { ChangeEventHandler, useRef } from "react"
-import { usePizzaContext } from "../PizzaContext/PizzaContext"
-import { SortType } from "../PizzaContext/pizzaContext.types"
+import { usePizzaContext } from "../../lib/PizzaContext"
+import { SortType } from "../../lib/pizzaContext.types"
 import './style.css'
 
 const PizzaSortingDropdown = () => {

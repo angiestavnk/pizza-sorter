@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import { usePizzaContext } from "../PizzaContext/PizzaContext"
-import { Ingredient } from "../PizzaContext/pizzaContext.types";
+import { usePizzaContext } from "../../lib/PizzaContext"
+import { Ingredient } from "../../lib/pizzaContext.types";
 import "./style.css"
 
 const PizzaIngredients = () => {

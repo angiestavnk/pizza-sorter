@@ -2,7 +2,7 @@ import { Pizza, Size } from "./pizzaContext.types"
 
 const pizzaMargheritaMedium: Pizza = {
   name: "Margarita",
-  price: 1200,
+  price: 12,
   size: Size.Medium,
   deliveryTime: 45,
   ingredients: [
@@ -35,7 +35,7 @@ const pizzaMargheritaMedium: Pizza = {
 
 const pizzaPepperoniLarge: Pizza = {
   name: "Pepperoni",
-  price: 600,
+  price: 6,
   size: Size.Large,
   deliveryTime: 60,
   ingredients: [
@@ -68,7 +68,7 @@ const pizzaPepperoniLarge: Pizza = {
 
 const pizzaQuatroFormaggiSmall: Pizza = {
   name: "Quatro Formaggi",
-  price: 600,
+  price: 6,
   size: Size.Small,
   deliveryTime: 30,
   ingredients: [
@@ -101,7 +101,7 @@ const pizzaQuatroFormaggiSmall: Pizza = {
 
 const pizzaVegetarianLarge: Pizza = {
   name: "Vegetarian",
-  price: 400,
+  price: 4,
   size: Size.Large,
   deliveryTime: 75,
   ingredients: [
@@ -138,7 +138,7 @@ const pizzaVegetarianLarge: Pizza = {
 
 const pizzaFunghiExtraLarge: Pizza = {
   name: "Funghi",
-  price: 1000,
+  price: 10,
   size: Size.ExtraLarge,
   deliveryTime: 75,
   ingredients: [
