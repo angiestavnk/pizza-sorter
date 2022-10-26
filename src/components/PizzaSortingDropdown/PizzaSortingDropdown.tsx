@@ -1,30 +1,27 @@
-import { ChangeEventHandler, useRef } from "react"
+import { Select } from "@toptal/picasso"
 import { usePizzaContext } from "../../lib/PizzaContext"
 import { SortType } from "../../lib/pizzaContext.types"
 import './style.css'
 
 const PizzaSortingDropdown = () => {
   const {sortType, sortTypeChanged } = usePizzaContext()
-
-  const ref = useRef<HTMLSelectElement>(null)
-  const handleChange = () => {
-    if(ref.current) {
-      sortTypeChanged(ref.current.value as SortType)
-    }
-  }
   
   return (
-    <select 
-      defaultValue={sortType} 
-      onChange={handleChange}
-      ref={ref}
-    >
-      <option value={SortType.name}>Sort by Name</option>
-      <option value={SortType.price}>Sort by Price</option>
-      <option value={SortType.size}>Sort by Size</option>
-      <option value={SortType.deliveryTime}>Sort by Delivery Time</option>
-    </select>
+    <Select
+      size='large'
+      options={OPTIONS}
+      value={sortType}
+      width='auto'
+      onChange={e => sortTypeChanged(e.target.value as SortType)}
+    />
   )
 }
+
+const OPTIONS = [
+  { value: SortType.name, text: 'Sort by Name' },
+  { value: SortType.price, text: 'Sort by Price' },
+  { value: SortType.size, text: 'Sort by Size' },
+  { value: SortType.deliveryTime, text: 'Sort by Delivery Time' },
+]
 
 export default PizzaSortingDropdown

@@ -2,18 +2,31 @@ import PizzaProvider from './components/PizzaProvider';
 import PizzaIngredients from './components/PizzaIngredients';
 import Pizza from './components/Pizza';
 import PizzaSortingDropdown from './components/PizzaSortingDropdown';
-import './App.css'
+import { default as Picasso } from '@toptal/picasso-provider'
+import { Container, Page, Typography } from '@toptal/picasso'
+import PageFooter from '@toptal/picasso/PageFooter/PageFooter';
+import { PizzaLogo } from './assets/pizzaLogo';
 
 function App() {
   return (
-    <PizzaProvider>
-      <h2>Select your Pizza</h2>
-      <div className='content-container'>
-        <PizzaSortingDropdown />
-        <Pizza />
-        <PizzaIngredients />
-      </div>
-    </PizzaProvider>
+    <Picasso>
+      <PizzaProvider>
+        <Page>
+          <Page.TopBar title='Pizza Sorter' logo={<PizzaLogo />}/>
+          <Page.Content>
+            <Container flex direction='column' alignItems='center'>
+            <Typography variant='heading' size='xlarge' style={{ margin: "90px 0px", fontSize: "50px" }}>
+              Select your Pizza
+            </Typography>
+              <PizzaSortingDropdown />
+              <Pizza />
+              <PizzaIngredients />
+            </Container>
+          </Page.Content>
+          <PageFooter/>
+        </Page>
+      </PizzaProvider>
+    </Picasso>
   );
 }
 
