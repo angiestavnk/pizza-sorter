@@ -1,4 +1,4 @@
-import { Select } from "@toptal/picasso"
+import { Container, Select } from "@toptal/picasso"
 import { usePizzaContext } from "../../lib/PizzaContext"
 import { SortType } from "../../lib/pizzaContext.types"
 import './style.css'
@@ -7,13 +7,15 @@ const PizzaSortingDropdown = () => {
   const {sortType, sortTypeChanged } = usePizzaContext()
   
   return (
-    <Select
-      size='large'
-      options={OPTIONS}
-      value={sortType}
-      width='auto'
-      onChange={e => sortTypeChanged(e.target.value as SortType)}
-    />
+    <Container top='large' bottom='large'>
+      <Select
+        size='large'
+        options={OPTIONS}
+        value={sortType}
+        width='auto'
+        onChange={e => sortTypeChanged(e.target.value as SortType)}
+      />
+    </Container>
   )
 }
 

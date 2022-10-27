@@ -14,13 +14,13 @@ function App() {
         <Page>
           <Page.TopBar title='Pizza Sorter' logo={<PizzaLogo />}/>
           <Page.Content>
-            <Container flex direction='column' alignItems='center'>
-            <Typography variant='heading' size='xlarge' style={{ margin: "90px 0px", fontSize: "50px" }}>
-              Select your Pizza
-            </Typography>
-              <PizzaSortingDropdown />
-              <Pizza />
-              <PizzaIngredients />
+            <Container flex direction='column' alignItems='center' bottom='large' top='large'>
+              <Typography variant='heading' size='xlarge' style={{ fontSize: "50px" }}>
+                Select your Pizza
+              </Typography>
+                <PizzaSortingDropdown />
+                <Pizza />
+                <PizzaIngredients />
             </Container>
           </Page.Content>
           <PageFooter/>

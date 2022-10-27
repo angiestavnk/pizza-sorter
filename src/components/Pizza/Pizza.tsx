@@ -1,4 +1,4 @@
-import { Typography } from "@toptal/picasso"
+import { Container, Typography } from "@toptal/picasso"
 import { usePizzaContext } from "../../lib/PizzaContext"
 import './style.css'
 
@@ -13,9 +13,11 @@ const Pizza = () => {
 
   return (
     <>
-      <Typography variant="heading" size="large" style={{ margin: '20px 0px' }}>
+    <Container top='medium' bottom='medium'>
+      <Typography variant="heading" size="large">
         Your Pizza is: {name}
       </Typography>
+    </Container>
       <Typography weight="semibold" as="ul">
         <li>Pizza price is: {price} $</li>
         <li>Pizza size is: {size} </li>
