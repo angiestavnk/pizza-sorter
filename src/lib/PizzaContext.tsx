@@ -1,14 +1,16 @@
-import { createContext, useContext } from "react";
-import { Pizza, SortType } from "./pizzaContext.types";
+import { createContext, useContext } from "react"
+import { Pizza, SortType } from "./pizzaContext.types"
 
 type PizzaContextType = {
-  pizzas: Pizza[]
+  sortedPizzas: Pizza[]
+  unsortedPizzas: Pizza[]
   sortTypeChanged: (sortType: SortType) => void
   sortType: SortType
 }
 
 const contextDefault = {
-  pizzas: [],
+  sortedPizzas: [],
+  unsortedPizzas: [],
   sortTypeChanged: () => {},
   sortType: SortType.name
 }
@@ -16,6 +18,6 @@ const contextDefault = {
 export const PizzaContext = createContext<PizzaContextType>(contextDefault)
 
 export const usePizzaContext = () => {
-  const {pizzas, sortType, sortTypeChanged} = useContext(PizzaContext)
-  return {pizzas, sortType, sortTypeChanged}
+  const {sortedPizzas, sortType, unsortedPizzas, sortTypeChanged} = useContext(PizzaContext)
+  return {sortedPizzas, sortType, unsortedPizzas, sortTypeChanged}
 }

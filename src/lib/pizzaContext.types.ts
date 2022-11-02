@@ -15,10 +15,12 @@ export type Ingredient = {
 }
 
 export type Pizza = {
+  id: number,
   name: string
   price: number,
   size: Size,
   deliveryTime: DeliveryTime,
+  img: string,
   ingredients: Ingredient[]
 }
 

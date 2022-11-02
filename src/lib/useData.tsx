@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { Pizza, SortType } from "./pizzaContext.types";
-import { getPizzaData } from "./pizzaData";
-import { sortProduct } from "./sortPizza";
+import { useEffect, useState } from "react"
+import { Pizza, SortType } from "./pizzaContext.types"
+import { getPizzaData } from "./pizzaData"
+import { sortProduct } from "./sortPizza"
 
 export const useData = (
   initialItems = getPizzaData(),
@@ -23,7 +23,8 @@ export const useData = (
 
   return {
     sortType,
-    pizzas: sortedPizzas,
+    sortedPizzas: sortedPizzas,
+    unsortedPizzas: pizzas,
     sortTypeChanged
   }
 }

@@ -1,10 +1,12 @@
 import { Pizza, Size } from "./pizzaContext.types"
 
 const pizzaMargheritaMedium: Pizza = {
-  name: "Margarita",
+  id: 1,
+  name: "Margherita",
   price: 12,
   size: Size.Medium,
   deliveryTime: 45,
+  img: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGl6emElMjBtYXJnaGVyaXRhfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
   ingredients: [
     {
       name: "Dough",
@@ -34,10 +36,12 @@ const pizzaMargheritaMedium: Pizza = {
 }
 
 const pizzaPepperoniLarge: Pizza = {
+  id: 2,
   name: "Pepperoni",
   price: 6,
   size: Size.Large,
   deliveryTime: 60,
+  img: "https://www.dogtownpizza.com/wp-content/uploads/2020/01/picking-slice-of-pepperoni-pizza-picture-id1133727757.jpg",
   ingredients: [
     {
       name: "Dough",
@@ -67,10 +71,12 @@ const pizzaPepperoniLarge: Pizza = {
 }
 
 const pizzaQuatroFormaggiSmall: Pizza = {
+  id: 3,
   name: "Quatro Formaggi",
   price: 6,
   size: Size.Small,
   deliveryTime: 30,
+  img: "https://img.freepik.com/premium-photo/four-cheese-pizza-quattro-formaggi-pizza-topped-with-tomato-sauce-mozzarella-gorgonzola_116118-1234.jpg?w=2000",
   ingredients: [
     {
       name: "Dough",
@@ -100,10 +106,12 @@ const pizzaQuatroFormaggiSmall: Pizza = {
 }
 
 const pizzaVegetarianLarge: Pizza = {
+  id: 4,
   name: "Vegetarian",
   price: 4,
   size: Size.Large,
   deliveryTime: 75,
+  img: "https://theyummybowl.com/wp-content/uploads/VEGETARIAN-PIZZA-GF-REC-500x500.jpg",
   ingredients: [
     {
       name: "Dough",
@@ -137,10 +145,12 @@ const pizzaVegetarianLarge: Pizza = {
 }
 
 const pizzaFunghiExtraLarge: Pizza = {
+  id: 5,
   name: "Funghi",
   price: 10,
   size: Size.ExtraLarge,
   deliveryTime: 75,
+  img: "https://assets.bonappetit.com/photos/627ac1da37243f2984b7959b/1:1/w_2560%2Cc_limit/0510-barbecue-mushroom-pizza-lede.jpg",
   ingredients: [
     {
       name: "Dough",

@@ -1,7 +1,6 @@
 import { Container, Select } from "@toptal/picasso"
 import { usePizzaContext } from "../../lib/PizzaContext"
 import { SortType } from "../../lib/pizzaContext.types"
-import './style.css'
 
 const PizzaSortingDropdown = () => {
   const {sortType, sortTypeChanged } = usePizzaContext()
