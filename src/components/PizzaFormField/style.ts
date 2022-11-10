@@ -1,3 +1,5 @@
+
+import { palette } from "@toptal/picasso/utils"
 import styled from "styled-components"
 
 export const FieldContainer = styled.div`
@@ -5,7 +7,7 @@ export const FieldContainer = styled.div`
 `
 
 export const ErrorMessage = styled.div`
-  color: red;
+  color: ${palette.red.main};
   display: flex;
   justify-content: center;
 `

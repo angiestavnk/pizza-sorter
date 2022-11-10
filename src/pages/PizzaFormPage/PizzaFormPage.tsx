@@ -15,6 +15,7 @@ const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 const onSubmit = async (values: Values) => {
   await sleep(300)
   alert(JSON.stringify(values, undefined, 2))
+  window.location.reload()
 }
 
 const required = (value: string) => (value ? undefined : 'This field is required')
